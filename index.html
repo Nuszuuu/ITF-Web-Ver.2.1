@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITF Simple Bank</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="poppins-regular">
+
+    <!-- Navigation -->
+    <nav class="poppins-medium">
+        <p>68070084</p>
+        <h1 class="poppins-bold">ITF Web</h1>
+        <p>Week 14</p>
+    </nav>
+
+    <!-- Header / Title -->
+    <div class="container">
+        <img src="Adore.png" width="96" alt="Cool">
+        <h2 id="my-title" class="poppins-bold">ITF Simple Bank</h2>
+        <p class="poppins-regular">Welcome to my first HTML + CSS + JS website!</p>
+        <hr>
+    </div>
+
+    <!-- Output Textarea -->
+    <textarea id="output" class="output poppins-regular" readonly></textarea>
+
+    <!-- Main Content: Left & Right Panels -->
+    <div class="content">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <!-- Account Overview -->
+            <div class="overview poppins-semibold">
+                <h3>Account Overview</h3>
+            </div>
+
+            <!-- Account Info -->
+            <div class="Account">
+                <img src="user.png" alt="user">
+                <div class="account-info">
+                    <h3 class="poppins-semibold">Account Information</h3>
+                    <p class="poppins-regular">Name: Skibidi</p>
+                    <p class="poppins-regular">Type: Savings Account</p>
+                </div>
+            </div>
+
+            <!-- Balance Info -->
+            <div class="Balance">
+                <img src="briefcase.png" alt="balance">
+                <div class="balance-info">
+                    <h3 class="poppins-semibold">Balance Information</h3>
+                    <p class="poppins-regular">Current Account Balance: <input type="number" id="account_balance" value="" placeholder="Enter amount"></p>
+                    <p class="poppins-regular">Current Cash Balance: <input type="number" id="cash_balance" value="" placeholder="Enter amount"></p>
+                    <p><button class="btn" id="confirm-btn">Confirm</button></p>
+                </div>
+            </div>
+
+            <!-- Bank Op -->
+            <div class="operation">
+                <img src="calculator.png" alt="calculator">
+                <div class="bank-op">
+                    <h3 class="poppins-semibold">Bank Operation</h3>
+
+                    <!-- Amount Input (ด้านบน) -->
+                    <div class="operation-input">
+                        <input type="number" id="operation-amount" value="" min="0" placeholder="Enter amount">
+                    </div>
+
+                    <!-- Operation Selector -->
+                    <div class="operation-selector">
+                        <button id="operation-btn">Select Operation ▼</button>
+                        <div id="operation-menu" class="operation-menu">
+                            <div class="operation-option" data-op="deposit">Deposit</div>
+                            <div class="operation-option" data-op="withdraw">Withdraw</div>
+                        </div>
+                    </div>
+
+                    <!-- Proceed Button -->
+                    <div>
+                        <button class="btn" id="proceed-btn">Proceed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <!-- Financial Tools -->
+            <div class="fitools poppins-semibold">
+                <h3>Financial Tools</h3>
+            </div>
+
+            <!-- Currency Converter -->
+            <div class="currency">
+                <img src="banknote.png" alt="balance">
+                <div class="cur-con">
+                    <h3 class="poppins-semibold">Currency Converter (coming Soon)</h3>
+                    <p class="poppins-regular">Input balance: <input type="number" id="account_balance_right" value="0" readonly></p>
+                    <p class="poppins-regular">Output balance: <input type="number" id="cash_balance_right" value="0" readonly></p>
+
+                    <!-- Currency Selector -->
+                    <div class="currency-selector">
+                        <button id="currency-btn">Select Currency ▼</button>
+                        <div id="currency-menu" class="currency-menu">
+                            <div class="currency-option" data-currency="USD">USD</div>
+                            <div class="currency-option" data-currency="THB">THB</div>
+                        </div>
+                    </div>
+
+                    <p><button class="btn">Convert</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

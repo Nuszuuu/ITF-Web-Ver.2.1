@@ -1,0 +1,268 @@
+/* ------------------ */
+/* Navigation & Layout */
+/* ------------------ */
+nav {
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    color: rgb(218, 16, 16);
+}
+
+body {
+    margin: 0;
+    background-color: rgb(255, 239, 187); /* สีพื้นหลังทั้งหมด */
+}
+
+.left {
+    display: flex;
+}
+
+.Account {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Account img {
+    width: 96px;
+    height: auto;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-info h3 {
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.account-info p {
+    margin: 2px 0;
+}
+
+.Balance {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Balance img {
+    width: 96px;
+    height: auto;
+}
+
+.balance-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.balance-info h3 {
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.balance-info p {
+    margin: 2px 0;
+}
+
+.textarea {
+    display: flex;
+    align-items: center;
+}
+
+.currency {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.currency img {
+    width: 96px;
+    height: auto;
+}
+
+.currency-selector, .operation-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.currency-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100px;
+    z-index: 10;
+    border-radius: 4px;
+    background-color: #f0f0f0; /* เพิ่มตรงนี้ */
+    border: 1px solid #333;
+}
+
+.operation-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100px;
+    z-index: 10;
+    border-radius: 4px;
+    background-color: #f0f0f0; /* เพิ่มตรงนี้ */
+    border: 1px solid #333;
+}
+
+.currency-menu.show, .operation-menu.show {
+    display: block;
+}
+
+.currency-option, .operation-option {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.currency-option:hover, .operation-option:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    gap: 1px; 
+    margin: 20px;
+}
+
+.left {
+    flex: 1; 
+    background-color: #d46363;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.right {
+    flex: 1; 
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+textarea {
+    width: 100%;
+    height: 18vh;
+    resize: none;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    background: #9affb8;
+}
+
+.operation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.operation img {
+    width: 96px;
+    height: auto;
+}
+
+.operation-input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#operation-amount {
+    width: 150px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #807b7b;
+}
+
+/* ------------------ */
+/* Button Style .btn  */
+/* ------------------ */
+.btn {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+/* --- สำหรับ operation-option และ currency-option --- */
+.operation-option.selected,
+.currency-option.selected {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* --- ปุ่ม select operation / currency แบบเรียบง่าย --- */
+#operation-btn, #currency-btn {
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+}
+
+#operation-btn:hover, #currency-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* ------------------ */
+/* Font Poppins */
+.poppins-thin { font-family: "Poppins", sans-serif; font-weight: 100; }
+.poppins-extralight { font-family: "Poppins", sans-serif; font-weight: 200; }
+.poppins-light { font-family: "Poppins", sans-serif; font-weight: 300; }
+.poppins-regular { font-family: "Poppins", sans-serif; font-weight: 400; }
+.poppins-medium { font-family: "Poppins", sans-serif; font-weight: 500; }
+.poppins-semibold { font-family: "Poppins", sans-serif; font-weight: 600; }
+.poppins-bold { font-family: "Poppins", sans-serif; font-weight: 700; }
+.poppins-extrabold { font-family: "Poppins", sans-serif; font-weight: 800; }
+.poppins-black { font-family: "Poppins", sans-serif; font-weight: 900; }
